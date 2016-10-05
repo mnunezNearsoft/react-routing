@@ -1,11 +1,16 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 export default class Layout extends React.Component{
 
     render(){
         return (
             <div>
-                <h1>Layout</h1>
+                <Link to='/' onlyActiveOnIndex={true}>Home</Link>
+                <Link to='/about'>About</Link>
+                <Link to='/contact'>Contact</Link>
+
+                {this.props.children}
             </div>
         );
     }
